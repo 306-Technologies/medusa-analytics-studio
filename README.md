@@ -1,23 +1,9 @@
 <p align="center">
-  <a href="https://www.medusajs.com" aria-label="Medusa">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-      <img alt="Medusa" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg" height="48">
-    </picture>
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.306technologies.com" aria-label="306 Technologies">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/306-logo-white.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/306-logo-ink.svg">
-      <img alt="306 Technologies" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/306-logo-ink.svg" height="40">
-    </picture>
-  </a>
+  <a href="https://www.306technologies.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/lockup-dark.svg"><img alt="Medusa × 306 Technologies" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/lockup-light.svg" height="44"></picture></a>
 </p>
 
 <p align="center">
-  <img alt="Medusa Analytics Studio" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/hero.jpg" width="100%">
+  <img alt="Medusa Analytics Studio" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/hero.webp" width="100%">
 </p>
 
 # Medusa Analytics Studio
@@ -56,21 +42,21 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img alt="Dashboard" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/dashboard.jpg"><br>
+      <img alt="Dashboard" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/dashboard.webp"><br>
       <b>Dashboard</b>
     </td>
     <td width="50%" valign="top">
-      <img alt="Reports" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/reports.jpg"><br>
+      <img alt="Reports" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/reports.webp"><br>
       <b>Reports</b>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <img alt="Live view" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/live-view.jpg"><br>
+      <img alt="Live view" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/live-view.webp"><br>
       <b>Live view</b>
     </td>
     <td width="50%" valign="top">
-      <img alt="SQL mode" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/sql-mode.jpg"><br>
+      <img alt="SQL mode" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/sql-mode.webp"><br>
       <b>SQL mode</b>
     </td>
   </tr>
