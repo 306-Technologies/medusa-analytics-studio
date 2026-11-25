@@ -143,20 +143,21 @@ module.exports = defineConfig({
         allowPrimary: process.env.ANALYTICS_SQL_ALLOW_PRIMARY === "true",
         mainDatabaseUrl: process.env.DATABASE_URL,
         reportingViews: ["sales_daily", "analytics_reports_daily"],
-        ssl: true,
+        ssl: process.env.ANALYTICS_SQL_SSL !== "false",
       },
     },
   ],
 })
 ```
 
-SQL mode stays off until you set `ANALYTICS_SQL_DISABLED=false` and `ANALYTICS_SQL_PASSWORD`. It runs on the replica in `ANALYTICS_DATABASE_URL`, or on the primary only with `ANALYTICS_SQL_ALLOW_PRIMARY=true`. Add the names to your `.env.template`:
+SQL mode stays off until you set `ANALYTICS_SQL_DISABLED=false` and `ANALYTICS_SQL_PASSWORD`. It runs on the replica in `ANALYTICS_DATABASE_URL`, or on the primary only with `ANALYTICS_SQL_ALLOW_PRIMARY=true`. TLS is on unless you set `ANALYTICS_SQL_SSL=false` (for example, a local database without TLS). Add the names to your `.env.template`:
 
 ```bash
 ANALYTICS_DATABASE_URL=
 ANALYTICS_SQL_DISABLED=true
 ANALYTICS_SQL_PASSWORD=
 ANALYTICS_SQL_ALLOW_PRIMARY=false
+ANALYTICS_SQL_SSL=true
 ```
 
 ### 3. Migrate and start
