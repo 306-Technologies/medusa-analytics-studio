@@ -6,6 +6,8 @@ the version follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-25
+
 ### Changed
 
 - The admin pages moved from `/app/analytics` to `/app/analytics-studio` so
