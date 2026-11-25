@@ -6,6 +6,13 @@ the version follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-25
+
+### Changed
+
+- README: screenshots, logos and project links.
+- Releases publish through npm trusted publishing instead of a stored token.
+
 ## [0.1.0] - 2026-11-25
 
 First release.
@@ -44,5 +51,6 @@ First release.
 - A failed reporting-role setup logs only the Postgres error code, never the
   statement that carries the SCRAM verifier.
 
-[Unreleased]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/306-Technologies/medusa-analytics-studio/releases/tag/v0.1.0
