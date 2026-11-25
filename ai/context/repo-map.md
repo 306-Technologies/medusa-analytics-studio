@@ -29,4 +29,4 @@
 | `shared/analytics/`           | Query language, types, logging, timezone, cache, lock keys                                                              |
 | `migration-scripts/`          | Core indexes on `order` and `cart`                                                                                      |
 | `scripts/setup-sql-role.ts`   | Prints or applies the SQL-mode role setup                                                                               |
-| `admin/`                      | Admin routes (`routes/analytics`), store timezone widget, chart library (`features/analytics/charts`)                   |
+| `admin/`                      | Admin routes (`routes/analytics-studio`), store timezone widget, chart library (`features/analytics/charts`)            |

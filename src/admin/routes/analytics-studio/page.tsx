@@ -1,9 +1,10 @@
 import { defineRouteConfig } from "@medusajs/admin-sdk"
-import { ChartBar, CogSixTooth, Plus } from "@medusajs/icons"
+import { CogSixTooth, Plus } from "@medusajs/icons"
 import { Button, Heading, Text, toast } from "@medusajs/ui"
 import { useState } from "react"
 
 import type { Comparison } from "../../../shared/analytics/query-language"
+import { AnalyticsStudioIcon } from "../../components/analytics-studio-icon"
 import { AddWidgetDrawer } from "../../features/analytics/components/add-widget-drawer"
 import {
   DashboardWidget,
@@ -39,7 +40,7 @@ const AnalyticsDashboardPage = () => {
     <div className="flex flex-col gap-y-3">
       <div className="flex flex-wrap items-center justify-between gap-5">
         <div className="flex items-center gap-x-3">
-          <Heading>Analytics</Heading>
+          <Heading>Analytics Studio</Heading>
           <PeriodPicker value={period} onChange={setPeriod} />
           <ComparePicker value={compare} onChange={setCompare} />
           {reporting ? (
@@ -149,12 +150,12 @@ const AnalyticsDashboardPage = () => {
 }
 
 export const config = defineRouteConfig({
-  label: "Analytics",
-  icon: ChartBar,
+  label: "Analytics Studio",
+  icon: AnalyticsStudioIcon,
 })
 
 export const handle = {
-  breadcrumb: () => "Analytics",
+  breadcrumb: () => "Analytics Studio",
 }
 
 export default AnalyticsDashboardPage
