@@ -1,6 +1,6 @@
-# @306technologies/analytics-plugin
+# Medusa Analytics Studio
 
-Analytics for the Medusa Admin: sales reports, a customisable dashboard, a live view of today's orders and an optional read-only SQL editor. Reports read from pre-computed sales facts, not raw orders, on their own read-only connection pool, so they never slow down checkout.
+`@306technologies/medusa-analytics-studio` · Analytics for the Medusa Admin: sales reports, a customisable dashboard, a live view of today's orders and an optional read-only SQL editor. Reports read from pre-computed sales facts, not raw orders, on their own read-only connection pool, so they never slow down checkout.
 
 Built by 306 Technologies. MIT licensed.
 
@@ -22,7 +22,7 @@ Built by 306 Technologies. MIT licensed.
 ## Install
 
 ```bash
-yarn add @306technologies/analytics-plugin
+yarn add @306technologies/medusa-analytics-studio
 ```
 
 Register the plugin, then list its modules under `modules` so each one gets its own options. A plugin's `options` would otherwise go to every module alike.
@@ -31,7 +31,7 @@ Register the plugin, then list its modules under `modules` so each one gets its 
 // medusa-config.ts
 import { defineConfig } from "@medusajs/framework/utils"
 
-const plugin = "@306technologies/analytics-plugin"
+const plugin = "@306technologies/medusa-analytics-studio"
 
 module.exports = defineConfig({
   // projectConfig: { ... },
@@ -70,7 +70,7 @@ npx medusa develop
 On a large store (hundreds of thousands of orders or more), build the analytics indexes on `order` and `cart` without blocking checkout before the first `db:migrate`; the migration then finds them and does nothing:
 
 ```bash
-psql "$DATABASE_URL" -f node_modules/@306technologies/analytics-plugin/sql/create-indexes-concurrently.sql
+psql "$DATABASE_URL" -f node_modules/@306technologies/medusa-analytics-studio/sql/create-indexes-concurrently.sql
 ```
 
 The first backfill of sales facts runs within five minutes of boot. Until it finishes, reports show that they are still filling.
@@ -121,7 +121,7 @@ When the app's database user can create roles, the role is set up at boot. Other
 
 ```ts
 // src/scripts/setup-sql-role.ts
-export { default } from "@306technologies/analytics-plugin/scripts/setup-sql-role"
+export { default } from "@306technologies/medusa-analytics-studio/scripts/setup-sql-role"
 ```
 
 Then print the statements for a database admin:
@@ -195,7 +195,7 @@ Generate migrations for a changed model with `npx medusa plugin:db:generate`.
 
 Every change needs an entry in [CHANGELOG.md](CHANGELOG.md), and releases follow [Semantic Versioning](https://semver.org/).
 
-Issues and pull requests are welcome at [github.com/306-Technologies/analytics-plugin](https://github.com/306-Technologies/analytics-plugin). Accepted changes are applied upstream and released from there, so a merged pull request appears in the next release.
+Issues and pull requests are welcome at [github.com/306-Technologies/medusa-analytics-studio](https://github.com/306-Technologies/medusa-analytics-studio). Accepted changes are applied upstream and released from there, so a merged pull request appears in the next release.
 
 ## License
 
