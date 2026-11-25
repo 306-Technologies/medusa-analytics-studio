@@ -29,6 +29,7 @@ jobs:
       - run: npm run build
       - run: npm pack --dry-run
 
+      # Trusted publishing (OIDC, no stored token) needs npm 11.5.1 or newer.
+      - run: npm install -g npm@latest
+
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
