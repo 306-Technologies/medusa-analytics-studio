@@ -6,6 +6,8 @@ the version follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-11-25
+
 ### Changed
 
 - README: the install example reads `ssl` for `analytics-sql` from
@@ -84,7 +86,8 @@ First release.
 - A failed reporting-role setup logs only the Postgres error code, never the
   statement that carries the SCRAM verifier.
 
-[Unreleased]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.1...v0.1.2
