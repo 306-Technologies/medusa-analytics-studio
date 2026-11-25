@@ -1,6 +1,6 @@
 {
   "name": "@306technologies/medusa-analytics-studio",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Medusa Analytics Studio: sales reports, dashboards, a live view and a read-only SQL editor for the Medusa Admin.",
   "license": "MIT",
   "author": "306 Technologies",
