@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@306technologies/analytics-plugin` are recorded here.
+All notable changes to `@306technologies/medusa-analytics-studio` are recorded here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and
 the version follows [Semantic Versioning](https://semver.org/).
 
@@ -44,5 +44,5 @@ First release.
 - A failed reporting-role setup logs only the Postgres error code, never the
   statement that carries the SCRAM verifier.
 
-[Unreleased]: https://github.com/306-Technologies/analytics-plugin/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/306-Technologies/analytics-plugin/releases/tag/v0.1.0
+[Unreleased]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/306-Technologies/medusa-analytics-studio/releases/tag/v0.1.0

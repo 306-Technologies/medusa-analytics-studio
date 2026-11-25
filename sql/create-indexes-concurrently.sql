@@ -4,7 +4,7 @@
 -- BEFORE deploying migration Migration20261122090000 (analytics-workspace
 -- module), from a plain psql session, outside any transaction:
 --
---   psql "$DATABASE_URL" -f node_modules/@306technologies/analytics-plugin/sql/create-indexes-concurrently.sql
+--   psql "$DATABASE_URL" -f node_modules/@306technologies/medusa-analytics-studio/sql/create-indexes-concurrently.sql
 --
 -- The migration then finds the indexes already there and does nothing.
 -- Each build can take minutes; orders and carts keep being written meanwhile.

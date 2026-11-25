@@ -1,25 +1,30 @@
 {
-  "name": "@306technologies/analytics-plugin",
+  "name": "@306technologies/medusa-analytics-studio",
   "version": "0.1.0",
-  "description": "Analytics for Medusa Admin: sales facts, reports, dashboards, live view and SQL mode.",
+  "description": "Medusa Analytics Studio: sales reports, dashboards, a live view and a read-only SQL editor for the Medusa Admin.",
   "license": "MIT",
   "author": "306 Technologies",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/306-Technologies/analytics-plugin.git"
+    "url": "git+https://github.com/306-Technologies/medusa-analytics-studio.git"
   },
-  "homepage": "https://github.com/306-Technologies/analytics-plugin#readme",
+  "homepage": "https://github.com/306-Technologies/medusa-analytics-studio#readme",
   "bugs": {
-    "url": "https://github.com/306-Technologies/analytics-plugin/issues"
+    "url": "https://github.com/306-Technologies/medusa-analytics-studio/issues"
   },
   "keywords": [
     "medusa",
-    "medusa-plugin",
     "medusa-v2",
+    "medusa-plugin",
+    "medusa-plugin-integration",
+    "medusa-plugin-analytics",
     "medusa-plugin-admin",
+    "medusajs",
     "analytics",
+    "ecommerce-analytics",
     "reports",
-    "dashboard"
+    "dashboard",
+    "sql"
   ],
   "publishConfig": {
     "access": "public"
