@@ -1,0 +1,103 @@
+{
+  "name": "@306technologies/analytics-plugin",
+  "version": "0.1.0",
+  "description": "Analytics for Medusa Admin: sales facts, reports, dashboards, live view and SQL mode.",
+  "license": "MIT",
+  "author": "306 Technologies",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/306-Technologies/analytics-plugin.git"
+  },
+  "homepage": "https://github.com/306-Technologies/analytics-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/306-Technologies/analytics-plugin/issues"
+  },
+  "keywords": [
+    "medusa",
+    "medusa-plugin",
+    "medusa-v2",
+    "medusa-plugin-admin",
+    "analytics",
+    "reports",
+    "dashboard"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    ".medusa/server/**/*",
+    "!.medusa/server/**/__tests__/**",
+    "sql/*.sql"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./workflows": "./.medusa/server/src/workflows/index.js",
+    "./.medusa/server/src/modules/*": "./.medusa/server/src/modules/*/index.js",
+    "./modules/*": "./.medusa/server/src/modules/*/index.js",
+    "./src/*": "./.medusa/server/src/*.js",
+    "./admin": {
+      "import": "./.medusa/server/src/admin/index.mjs",
+      "require": "./.medusa/server/src/admin/index.js",
+      "default": "./.medusa/server/src/admin/index.js"
+    },
+    "./*": "./.medusa/server/src/*.js"
+  },
+  "scripts": {
+    "build": "medusa plugin:build && node scripts/link-admin-css.mjs",
+    "dev": "medusa plugin:develop",
+    "lint": "medusa lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check-types": "tsc --noEmit",
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit --passWithNoTests"
+  },
+  "dependencies": {
+    "cobe": "0.6.3",
+    "pg": "8.20.0",
+    "pg-cursor": "2.19.0",
+    "recharts": "3.11.0"
+  },
+  "devDependencies": {
+    "@medusajs/admin-sdk": "2.19.0",
+    "@medusajs/cli": "2.19.0",
+    "@medusajs/eslint-plugin": "2.19.0",
+    "@medusajs/framework": "2.19.0",
+    "@medusajs/icons": "2.19.0",
+    "@medusajs/js-sdk": "2.19.0",
+    "@medusajs/medusa": "2.19.0",
+    "@medusajs/test-utils": "2.19.0",
+    "@medusajs/ui": "4.2.1",
+    "@swc/core": "^1.7.28",
+    "@swc/jest": "^0.2.36",
+    "@tanstack/react-query": "5.64.2",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^20.12.11",
+    "@types/pg": "8.20.4",
+    "@types/pg-cursor": "2.7.2",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.2.25",
+    "eslint": "^9.39.4",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "7.18.2",
+    "typescript": "^5.6.2",
+    "vite": "^7.3.6",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "@medusajs/admin-sdk": "2.19.0",
+    "@medusajs/framework": "2.19.0",
+    "@medusajs/icons": "2.19.0",
+    "@medusajs/js-sdk": "2.19.0",
+    "@medusajs/medusa": "2.19.0",
+    "@medusajs/ui": "4.2.1",
+    "@tanstack/react-query": "5.64.2",
+    "react": "^18.3.1",
+    "react-router-dom": "7.18.2"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

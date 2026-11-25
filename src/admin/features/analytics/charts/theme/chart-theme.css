@@ -1,0 +1,95 @@
+:root {
+  --analytics-blue: #3b82f6;
+  --analytics-violet: #8b5cf6;
+  --analytics-pink: #ec4899;
+  --analytics-orange: #f97316;
+  --analytics-cyan: #06b6d4;
+  --analytics-green: #10b981;
+  --analytics-rose: #f43f5e;
+  --analytics-teal: #14b8a6;
+  --analytics-other: #a1a1aa;
+
+  --analytics-card-bg: #ffffff;
+  --analytics-card-border: rgba(0, 0, 0, 0.08);
+  --analytics-card-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+  --analytics-inset-bg: #f4f4f5;
+
+  --analytics-fg-base: #18181b;
+  --analytics-fg-title: #52525b;
+  --analytics-fg-muted: #71717a;
+  --analytics-fg-on-fill: #ffffff;
+
+  --analytics-grid: rgba(0, 0, 0, 0.07);
+  --analytics-track: rgba(0, 0, 0, 0.05);
+  --analytics-axis: rgba(0, 0, 0, 0.16);
+  --analytics-cursor: rgba(0, 0, 0, 0.2);
+  --analytics-band: rgba(0, 0, 0, 0.03);
+  --analytics-fg-on-tile: rgba(24, 24, 27, 0.65);
+  --analytics-empty: #f1f1f3;
+
+  --analytics-positive-bg: #d1fae5;
+  --analytics-negative-bg: #ffe4e6;
+
+  --analytics-glow: 0.4;
+}
+
+/* Medusa puts .dark on <html>. */
+.dark {
+  --analytics-blue: #60a5fa;
+  --analytics-violet: #a78bfa;
+  --analytics-pink: #f472b6;
+  --analytics-orange: #fb923c;
+  --analytics-cyan: #22d3ee;
+  --analytics-green: #34d399;
+  --analytics-rose: #fb7185;
+  --analytics-teal: #2dd4bf;
+  --analytics-other: #52525b;
+
+  --analytics-card-bg: #212124;
+  --analytics-card-border: rgba(255, 255, 255, 0.08);
+  --analytics-card-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.32);
+  --analytics-inset-bg: #27272a;
+
+  --analytics-fg-base: #f4f4f5;
+  --analytics-fg-title: #a1a1aa;
+  --analytics-fg-muted: #71717a;
+  --analytics-fg-on-fill: #0b0b0c;
+
+  --analytics-grid: rgba(255, 255, 255, 0.08);
+  --analytics-track: rgba(255, 255, 255, 0.05);
+  --analytics-axis: rgba(255, 255, 255, 0.16);
+  --analytics-cursor: rgba(255, 255, 255, 0.25);
+  --analytics-band: rgba(255, 255, 255, 0.04);
+  --analytics-fg-on-tile: rgba(255, 255, 255, 0.7);
+  --analytics-empty: #2a2a2e;
+
+  --analytics-positive-bg: #022c22;
+  --analytics-negative-bg: #4c0519;
+
+  --analytics-glow: 1;
+}
+
+.analytics-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--analytics-card-bg);
+  border: 1px solid var(--analytics-card-border);
+  border-radius: 12px;
+  box-shadow: var(--analytics-card-shadow);
+  color: var(--analytics-fg-base);
+}
+
+.analytics-title {
+  color: var(--analytics-fg-title);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.analytics-caption {
+  color: var(--analytics-fg-muted);
+  font-size: 12px;
+  line-height: 16px;
+}
