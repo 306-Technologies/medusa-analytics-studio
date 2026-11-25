@@ -6,6 +6,12 @@ the version follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- README: the install example reads `ssl` for `analytics-sql` from
+  `ANALYTICS_SQL_SSL` (on unless set to `false`) instead of hard-coding `true`,
+  and lists it in the `.env.template` names.
+
 ## [0.2.1] - 2026-11-25
 
 ### Changed
