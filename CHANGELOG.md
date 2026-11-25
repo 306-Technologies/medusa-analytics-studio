@@ -6,6 +6,15 @@ the version follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- The admin pages moved from `/app/analytics` to `/app/analytics-studio` so
+  they no longer clash with other analytics plugins. Old bookmarks to
+  `/app/analytics` stop working.
+- The sidebar entry and dashboard title are now "Analytics Studio", with the
+  Analytics Studio icon.
+- README: how the reporting timezone works and what changing it does.
+
 ## [0.1.2] - 2026-11-25
 
 ### Changed

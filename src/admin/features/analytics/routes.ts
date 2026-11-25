@@ -1,7 +1,7 @@
-export const DASHBOARD_HREF = "/analytics"
-export const LIVE_HREF = "/analytics/live"
-export const REPORTS_HREF = "/analytics/reports"
-export const SQL_HREF = "/analytics/sql"
+export const DASHBOARD_HREF = "/analytics-studio"
+export const LIVE_HREF = "/analytics-studio/live"
+export const REPORTS_HREF = "/analytics-studio/reports"
+export const SQL_HREF = "/analytics-studio/sql"
 
 export const NEW_REPORT_ID = "new"
 

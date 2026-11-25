@@ -159,6 +159,18 @@ npx medusa develop
 
 > **First run:** the first backfill of sales facts runs within five minutes of boot. Until it finishes, reports show that they are still filling.
 
+### 4. Set your reporting timezone
+
+Reports decide which day (and hour) an order belongs to using one store-wide **reporting timezone**. It starts as `UTC`, so an order placed at 11pm in New York lands on the next day.
+
+Set it once in **Settings → Store → Reporting timezone** to the timezone you run the business in. It applies to every admin user and every report.
+
+Changing it later is safe:
+
+- Facts rebuild in the background in the new timezone, within a few minutes (longer on a large store).
+- Until the rebuild finishes, reports keep the old timezone and show a "Switching to …" notice.
+- Past days are re-split, so daily numbers shift. Totals over a period don't change.
+
 <br>
 
 ## Options
@@ -323,9 +335,9 @@ The plugin does not refuse writes for a public demo by itself. Pair `readOnly` w
 
 ## Admin
 
-- **Analytics** in the sidebar: dashboard, reports, live view.
-- **SQL** at `/app/analytics/sql`, only when SQL mode is on.
-- **Reporting timezone** widget on the store details page.
+- **Analytics Studio** in the sidebar, at `/app/analytics-studio`: dashboard, reports, live view.
+- **SQL** at `/app/analytics-studio/sql`, only when SQL mode is on.
+- **Reporting timezone** widget on the store details page (see [step 4](#4-set-your-reporting-timezone)).
 
 <br>
 
