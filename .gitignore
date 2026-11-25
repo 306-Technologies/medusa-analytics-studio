@@ -2,3 +2,4 @@
 .medusa
 .yalc
 yalc.lock
+src/admin/__admin-extensions__.js

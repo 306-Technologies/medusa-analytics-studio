@@ -25,6 +25,11 @@ First release.
   `cart` tables after all module migrations, so `medusa db:migrate` works on an
   empty database.
 - Exports `./modules/<name>`, `./workflows`, `./admin` and `./src/<path>`.
+- `sql/create-indexes-concurrently.sql`, to build the `order` and `cart`
+  indexes without blocking writes on a large store before the first migration.
+- `setup-sql-role` script for SQL mode: run it from a one-line re-export in the
+  host app, with `print` to output the statements for a database admin.
+- Releases publish to npm from GitHub Releases, with provenance.
 
 ### Security
 
