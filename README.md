@@ -1,14 +1,20 @@
+<br>
+
 <p align="center">
-  <a href="https://www.306technologies.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/lockup-dark.svg"><img alt="Medusa × 306 Technologies" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/lockup-light.svg" height="44"></picture></a>
+  <a href="https://www.306technologies.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/lockup-dark.svg"><img alt="Medusa × 306 Technologies" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/lockup-light.svg" height="40"></picture></a>
 </p>
+
+<br>
 
 <p align="center">
   <img alt="Medusa Analytics Studio" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/hero.webp" width="100%">
 </p>
 
-# Medusa Analytics Studio
+<h1 align="center">Medusa Analytics Studio</h1>
 
-`@306technologies/medusa-analytics-studio` · Analytics for the Medusa Admin: sales reports, a customisable dashboard, a live view of today's orders and an optional read-only SQL editor. Reports read from pre-computed sales facts, not raw orders, on their own read-only connection pool, so they never slow down checkout.
+<p align="center">
+  Sales reports, dashboards, a live view and a read-only SQL editor for the Medusa Admin.
+</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@306technologies/medusa-analytics-studio"><img src="https://img.shields.io/npm/v/@306technologies/medusa-analytics-studio?color=18181B" alt="npm version"></a>
@@ -16,21 +22,63 @@
   <a href="https://github.com/306-Technologies/medusa-analytics-studio/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-18181B" alt="MIT license"></a>
 </p>
 
----
-
-<h3 align="center">Built by <a href="https://www.306technologies.com">306 Technologies</a></h3>
 <p align="center">
-  Medusa & headless commerce experts. Senior-led engineering, accelerated by AI.
-</p>
-<p align="center">
-  <a href="https://www.306technologies.com"><img src="https://img.shields.io/badge/Website-306%20Technologies-111827?logo=google-chrome" alt="306 Technologies website"></a>
-  <a href="https://cal.com/team/306-technologies/meeting-with-raj?overlayCalendar=true"><img src="https://img.shields.io/badge/Book%20a%20Call-30%20min-2563EB?logo=google-calendar&logoColor=white" alt="Book a call"></a>
-  <a href="mailto:info@306technologies.com"><img src="https://img.shields.io/badge/Contact-info%40306technologies.com-10B981?logo=minutemailer&logoColor=white" alt="Email 306 Technologies"></a>
+  <a href="#features">Features</a> ·
+  <a href="#install">Install</a> ·
+  <a href="#options">Options</a> ·
+  <a href="#add-your-own-views">Reporting views</a> ·
+  <a href="#query-language">Query language</a> ·
+  <a href="#safety">Safety</a>
 </p>
 
----
+<br>
+
+`@306technologies/medusa-analytics-studio` · Analytics for the Medusa Admin: sales reports, a customisable dashboard, a live view of today's orders and an optional read-only SQL editor. Reports read from pre-computed sales facts, not raw orders, on their own read-only connection pool, so they never slow down checkout.
+
+<br>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <br>
+      <b>Built by <a href="https://www.306technologies.com">306 Technologies</a></b>
+      <br>
+      Medusa & headless commerce experts. Senior-led engineering, accelerated by AI.
+      <br><br>
+      <a href="https://www.306technologies.com"><img src="https://img.shields.io/badge/Website-306%20Technologies-111827?logo=google-chrome" alt="306 Technologies website"></a>
+      <a href="https://cal.com/team/306-technologies/meeting-with-raj?overlayCalendar=true"><img src="https://img.shields.io/badge/Book%20a%20Call-30%20min-2563EB?logo=google-calendar&logoColor=white" alt="Book a call"></a>
+      <a href="mailto:info@306technologies.com"><img src="https://img.shields.io/badge/Contact-info%40306technologies.com-10B981?logo=minutemailer&logoColor=white" alt="Email 306 Technologies"></a>
+      <br><br>
+    </td>
+  </tr>
+</table>
+
+<br>
 
 ## Features
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img alt="Dashboard" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/dashboard.webp"><br><br>
+      <b>Dashboard</b>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img alt="Reports" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/reports.webp"><br><br>
+      <b>Reports</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img alt="Live view" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/live-view.webp"><br><br>
+      <b>Live view</b>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img alt="SQL mode" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/sql-mode.webp"><br><br>
+      <b>SQL mode</b>
+    </td>
+  </tr>
+</table>
 
 - **Dashboard**: drag-and-drop tiles, each a saved report with its own chart.
 - **Reports**: built-in reports and your own, written in a small query language with a visual editor and 19 chart types.
@@ -39,28 +87,7 @@
 - **Sales facts**: per-order and per-line facts plus daily rollups, kept current from order and refund events, with currency conversion and a store-wide reporting timezone.
 - **Read-only by design**: see [Safety](#safety).
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img alt="Dashboard" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/dashboard.webp"><br>
-      <b>Dashboard</b>
-    </td>
-    <td width="50%" valign="top">
-      <img alt="Reports" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/reports.webp"><br>
-      <b>Reports</b>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img alt="Live view" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/live-view.webp"><br>
-      <b>Live view</b>
-    </td>
-    <td width="50%" valign="top">
-      <img alt="SQL mode" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/sql-mode.webp"><br>
-      <b>SQL mode</b>
-    </td>
-  </tr>
-</table>
+<br>
 
 ## Requirements
 
@@ -68,11 +95,17 @@
 - PostgreSQL (tested with 16).
 - Redis recommended in production (`REDIS_URL`): report caching, queued events and one-instance-at-a-time jobs.
 
+<br>
+
 ## Install
+
+### 1. Add the package
 
 ```bash
 yarn add @306technologies/medusa-analytics-studio
 ```
+
+### 2. Register the plugin
 
 Register the plugin, then list its modules under `modules` so each one gets its own options. A plugin's `options` would otherwise go to every module alike.
 
@@ -109,6 +142,8 @@ module.exports = defineConfig({
 })
 ```
 
+### 3. Migrate and start
+
 Then run the migrations and start Medusa:
 
 ```bash
@@ -116,19 +151,21 @@ npx medusa db:migrate
 npx medusa develop
 ```
 
-On a large store (hundreds of thousands of orders or more), build the analytics indexes on `order` and `cart` without blocking checkout before the first `db:migrate`; the migration then finds them and does nothing:
+> **Large store?** On a large store (hundreds of thousands of orders or more), build the analytics indexes on `order` and `cart` without blocking checkout before the first `db:migrate`; the migration then finds them and does nothing:
+>
+> ```bash
+> psql "$DATABASE_URL" -f node_modules/@306technologies/medusa-analytics-studio/sql/create-indexes-concurrently.sql
+> ```
 
-```bash
-psql "$DATABASE_URL" -f node_modules/@306technologies/medusa-analytics-studio/sql/create-indexes-concurrently.sql
-```
+> **First run:** the first backfill of sales facts runs within five minutes of boot. Until it finishes, reports show that they are still filling.
 
-The first backfill of sales facts runs within five minutes of boot. Until it finishes, reports show that they are still filling.
+<br>
 
 ## Options
 
 ### `analytics-reader`
 
-| Option               | Default           |                                                                                |
+| Option               | Default           | Description                                                                    |
 | -------------------- | ----------------- | ------------------------------------------------------------------------------ |
 | `databaseUrl`        | the main database | Where reports read from, for example a read replica.                           |
 | `separateDatabase`   | `false`           | `true` when `databaseUrl` is not the main database. Requires `databaseUrl`.    |
@@ -138,7 +175,7 @@ The first backfill of sales facts runs within five minutes of boot. Until it fin
 
 ### `sales-facts`
 
-| Option        | Default                  |                                                                                                                        |
+| Option        | Default                  | Description                                                                                                            |
 | ------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | `jobsEnabled` | `true`                   | Run the backfill, drain, reconcile and exchange-rate jobs. Set `false` on instances that should leave them to another. |
 | `fxUrl`       | Frankfurter's public API | A Frankfurter-compatible `https` URL for exchange rates, or `"off"`.                                                   |
@@ -146,7 +183,7 @@ The first backfill of sales facts runs within five minutes of boot. Until it fin
 
 ### `analytics-workspace`
 
-| Option     | Default |                                                                                                                      |
+| Option     | Default | Description                                                                                                          |
 | ---------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
 | `readOnly` | `false` | The host refuses writes (for example a public demo): the admin keeps saved reports and the dashboard in the browser. |
 
@@ -154,7 +191,7 @@ The first backfill of sales facts runs within five minutes of boot. Until it fin
 
 SQL mode stays off unless `disabled` is explicitly `false`, a password is set, and the role and replica checks pass.
 
-| Option                 | Default  |                                                                                              |
+| Option                 | Default  | Description                                                                                  |
 | ---------------------- | -------- | -------------------------------------------------------------------------------------------- |
 | `disabled`             | required | `true` turns SQL mode off whatever else is set.                                              |
 | `password`             | none     | Password for the `reporting_reader` role: at least 16 printable ASCII characters, no spaces. |
@@ -181,7 +218,9 @@ yarn medusa exec ./src/scripts/setup-sql-role.ts print
 
 The output holds the password's SCRAM verifier: treat it as a secret. Use a random password of 32 or more characters.
 
-#### Add your own views
+<br>
+
+## Add your own views
 
 SQL mode reads only views in the `reporting` schema, so data from your own modules (loyalty points, subscriptions, B2B accounts) needs a view there. The plugin ships `sales_daily` and `analytics_reports_daily`. Build yours with the same helper, in a migration of one of your app's modules:
 
@@ -235,6 +274,8 @@ Then:
 
 On a streaming read replica, the views and grants arrive by replication. They don't need to be created there.
 
+<br>
+
 ## Query language
 
 ```text
@@ -263,6 +304,8 @@ const result = await reader.runReport(
 )
 ```
 
+<br>
+
 ## Safety
 
 Reports cannot write to your database. Each layer holds on its own:
@@ -276,11 +319,15 @@ SQL mode runs as a role that can read only the listed views, inside a read-only 
 
 The plugin does not refuse writes for a public demo by itself. Pair `readOnly` with your own write guard.
 
+<br>
+
 ## Admin
 
 - **Analytics** in the sidebar: dashboard, reports, live view.
 - **SQL** at `/app/analytics/sql`, only when SQL mode is on.
 - **Reporting timezone** widget on the store details page.
+
+<br>
 
 ## Development
 
@@ -300,11 +347,15 @@ Every change needs an entry in [CHANGELOG.md](CHANGELOG.md), and releases follow
 
 Issues and pull requests are welcome at [github.com/306-Technologies/medusa-analytics-studio](https://github.com/306-Technologies/medusa-analytics-studio). Accepted changes are applied upstream and released from there, so a merged pull request appears in the next release.
 
+<br>
+
 ## Links
 
 - **Website:** [306technologies.com](https://www.306technologies.com)
 - **Book a call:** [30 min with 306 Technologies](https://cal.com/team/306-technologies/meeting-with-raj?overlayCalendar=true)
 - **Email:** [info@306technologies.com](mailto:info@306technologies.com)
+
+<br>
 
 ## License
 
