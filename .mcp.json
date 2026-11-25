@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "medusa-docs": {
+      "type": "http",
+      "url": "https://docs.medusajs.com/mcp"
+    }
+  }
+}
