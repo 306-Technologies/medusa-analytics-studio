@@ -1,8 +1,48 @@
+<p align="center">
+  <a href="https://www.medusajs.com" aria-label="Medusa">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
+      <img alt="Medusa" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg" height="48">
+    </picture>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.306technologies.com" aria-label="306 Technologies">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/306-logo-white.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/306-logo-ink.svg">
+      <img alt="306 Technologies" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/306-logo-ink.svg" height="40">
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <img alt="Medusa Analytics Studio" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/hero.jpg" width="100%">
+</p>
+
 # Medusa Analytics Studio
 
 `@306technologies/medusa-analytics-studio` · Analytics for the Medusa Admin: sales reports, a customisable dashboard, a live view of today's orders and an optional read-only SQL editor. Reports read from pre-computed sales facts, not raw orders, on their own read-only connection pool, so they never slow down checkout.
 
-Built by 306 Technologies. MIT licensed.
+<p align="center">
+  <a href="https://www.npmjs.com/package/@306technologies/medusa-analytics-studio"><img src="https://img.shields.io/npm/v/@306technologies/medusa-analytics-studio?color=18181B" alt="npm version"></a>
+  <a href="https://docs.medusajs.com"><img src="https://img.shields.io/badge/Medusa-v2.19-18181B" alt="Medusa v2.19"></a>
+  <a href="https://github.com/306-Technologies/medusa-analytics-studio/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-18181B" alt="MIT license"></a>
+</p>
+
+---
+
+<h3 align="center">Built by <a href="https://www.306technologies.com">306 Technologies</a></h3>
+<p align="center">
+  Medusa & headless commerce experts. Senior-led engineering, accelerated by AI.
+</p>
+<p align="center">
+  <a href="https://www.306technologies.com"><img src="https://img.shields.io/badge/Website-306%20Technologies-111827?logo=google-chrome" alt="306 Technologies website"></a>
+  <a href="https://cal.com/team/306-technologies/meeting-with-raj?overlayCalendar=true"><img src="https://img.shields.io/badge/Book%20a%20Call-30%20min-2563EB?logo=google-calendar&logoColor=white" alt="Book a call"></a>
+  <a href="mailto:info@306technologies.com"><img src="https://img.shields.io/badge/Contact-info%40306technologies.com-10B981?logo=minutemailer&logoColor=white" alt="Email 306 Technologies"></a>
+</p>
+
+---
 
 ## Features
 
@@ -12,6 +52,29 @@ Built by 306 Technologies. MIT licensed.
 - **SQL mode** (optional, off by default): admin-written SQL over curated reporting views, as a restricted read-only Postgres role.
 - **Sales facts**: per-order and per-line facts plus daily rollups, kept current from order and refund events, with currency conversion and a store-wide reporting timezone.
 - **Read-only by design**: see [Safety](#safety).
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img alt="Dashboard" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/dashboard.jpg"><br>
+      <b>Dashboard</b>
+    </td>
+    <td width="50%" valign="top">
+      <img alt="Reports" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/reports.jpg"><br>
+      <b>Reports</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img alt="Live view" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/live-view.jpg"><br>
+      <b>Live view</b>
+    </td>
+    <td width="50%" valign="top">
+      <img alt="SQL mode" src="https://raw.githubusercontent.com/306-Technologies/medusa-analytics-studio/main/.github/assets/sql-mode.jpg"><br>
+      <b>SQL mode</b>
+    </td>
+  </tr>
+</table>
 
 ## Requirements
 
@@ -250,6 +313,12 @@ Generate migrations for a changed model with `npx medusa plugin:db:generate`.
 Every change needs an entry in [CHANGELOG.md](CHANGELOG.md), and releases follow [Semantic Versioning](https://semver.org/).
 
 Issues and pull requests are welcome at [github.com/306-Technologies/medusa-analytics-studio](https://github.com/306-Technologies/medusa-analytics-studio). Accepted changes are applied upstream and released from there, so a merged pull request appears in the next release.
+
+## Links
+
+- **Website:** [306technologies.com](https://www.306technologies.com)
+- **Book a call:** [30 min with 306 Technologies](https://cal.com/team/306-technologies/meeting-with-raj?overlayCalendar=true)
+- **Email:** [info@306technologies.com](mailto:info@306technologies.com)
 
 ## License
 
