@@ -6,6 +6,13 @@ the version follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- README: the install example now configures `analytics-sql` from env vars
+  (`ANALYTICS_SQL_DISABLED`, `ANALYTICS_SQL_PASSWORD`, `ANALYTICS_DATABASE_URL`,
+  `ANALYTICS_SQL_ALLOW_PRIMARY`), with `ssl: true` and the two shipped
+  reporting views listed.
+
 ## [0.2.0] - 2026-11-25
 
 ### Changed

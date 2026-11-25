@@ -136,10 +136,27 @@ module.exports = defineConfig({
     },
     {
       resolve: `${plugin}/modules/analytics-sql`,
-      options: { disabled: true, ssl: false },
+      options: {
+        disabled: process.env.ANALYTICS_SQL_DISABLED !== "false",
+        password: process.env.ANALYTICS_SQL_PASSWORD,
+        analyticsDatabaseUrl: process.env.ANALYTICS_DATABASE_URL,
+        allowPrimary: process.env.ANALYTICS_SQL_ALLOW_PRIMARY === "true",
+        mainDatabaseUrl: process.env.DATABASE_URL,
+        reportingViews: ["sales_daily", "analytics_reports_daily"],
+        ssl: true,
+      },
     },
   ],
 })
+```
+
+SQL mode stays off until you set `ANALYTICS_SQL_DISABLED=false` and `ANALYTICS_SQL_PASSWORD`. It runs on the replica in `ANALYTICS_DATABASE_URL`, or on the primary only with `ANALYTICS_SQL_ALLOW_PRIMARY=true`. Add the names to your `.env.template`:
+
+```bash
+ANALYTICS_DATABASE_URL=
+ANALYTICS_SQL_DISABLED=true
+ANALYTICS_SQL_PASSWORD=
+ANALYTICS_SQL_ALLOW_PRIMARY=false
 ```
 
 ### 3. Migrate and start
