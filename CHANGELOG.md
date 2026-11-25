@@ -6,6 +6,13 @@ the version follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-11-25
+
+### Changed
+
+- README: theme-aware Medusa and 306 Technologies logo, lighter WebP
+  screenshots and tidier layout.
+
 ## [0.1.1] - 2026-11-25
 
 ### Changed
@@ -51,6 +58,7 @@ First release.
 - A failed reporting-role setup logs only the Postgres error code, never the
   statement that carries the SCRAM verifier.
 
-[Unreleased]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/306-Technologies/medusa-analytics-studio/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/306-Technologies/medusa-analytics-studio/releases/tag/v0.1.0
