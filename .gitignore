@@ -3,3 +3,4 @@
 .yalc
 yalc.lock
 src/admin/__admin-extensions__.js
+.claude/settings.local.json

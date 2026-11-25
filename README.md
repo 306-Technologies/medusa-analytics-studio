@@ -132,6 +132,60 @@ yarn medusa exec ./src/scripts/setup-sql-role.ts print
 
 The output holds the password's SCRAM verifier: treat it as a secret. Use a random password of 32 or more characters.
 
+#### Add your own views
+
+SQL mode reads only views in the `reporting` schema, so data from your own modules (loyalty points, subscriptions, B2B accounts) needs a view there. The plugin ships `sales_daily` and `analytics_reports_daily`. Build yours with the same helper, in a migration of one of your app's modules:
+
+```ts
+// src/modules/loyalty/migrations/Migration20260101000000.ts
+import { Migration } from "@medusajs/framework/mikro-orm/migrations"
+import {
+  dropReportingView,
+  reportingView,
+} from "@306technologies/medusa-analytics-studio/shared/analytics/reporting-view"
+
+export class Migration20260101000000 extends Migration {
+  override async up(): Promise<void> {
+    this.addSql(
+      reportingView({
+        name: "loyalty_points_daily",
+        comment: "Loyalty points earned and spent per day",
+        sql: `
+          select created_at::date as day,
+                 sum(points) filter (where points > 0) as earned,
+                 -sum(points) filter (where points < 0) as spent
+          from loyalty_transaction
+          where deleted_at is null
+          group by 1`,
+        columns: {
+          day: "Day, in UTC",
+          earned: "Points earned",
+          spent: "Points spent",
+        },
+      })
+    )
+  }
+
+  override async down(): Promise<void> {
+    this.addSql(dropReportingView("loyalty_points_daily"))
+  }
+}
+```
+
+- `reportingView` creates the `reporting` schema if needed, then `create or replace view reporting.<name>` with your `select`, and the view and column comments. The SQL editor shows those comments in its views panel.
+- `name` and column names: lowercase letters, digits and `_`, starting with a letter, at most 63 characters.
+- `sql` is one `select` (or `with ... select`). A trailing `;` is dropped.
+- The view runs with its owner's rights, so it may join any table, and SQL mode sees only the columns you select. Leave out customer details (emails, names, addresses) unless admins should query them.
+- `create or replace` can only add columns at the end. To rename, remove or reorder columns, call `dropReportingView(name)` first in the same migration.
+
+Then:
+
+1. Run `npx medusa db:migrate`.
+2. Add the view to `reportingViews` (`"loyalty_points_daily"`, or a prefix such as `"loyalty_*"`). A view that isn't listed shows as "Not enabled yet" in the views panel, and SQL mode can't read it.
+3. Restart the app. Grants are applied at boot, on the primary: the role is granted `select` on each listed view and loses access to every other view in the schema. Running the `setup-sql-role` script without `print` applies them too.
+
+On a streaming read replica, the views and grants arrive by replication. They don't need to be created there.
+
 ## Query language
 
 ```text
